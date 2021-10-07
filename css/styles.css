@@ -1,0 +1,354 @@
+
+* {
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.grid-container {
+
+display: grid;
+height: 100%;
+grid-template-columns: 1fr;
+grid-template-rows: 60px 70px 1fr;
+grid-template-areas:
+"header"
+"nav"
+"main";
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "dash"
+    "traffic"
+    "daily-traffic"
+    "mobile-users"
+    "socials" 
+    "new-members" 
+    "recent-activity"
+    "message" 
+    "settings"
+}
+/* HEADER */
+.header {
+    
+    grid-area: header;
+    display: flex;
+    flex-direction:row;
+    background-color: #9370DB;
+    height: auto;
+    width: auto;
+    padding: 10px;
+
+}
+
+.header-container{
+    /* padding-right: 50px; */
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+
+.web-app {
+
+    font-size: medium;
+    color: white;
+    padding-left: 10px;
+}
+
+.member-img {
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.user-name {
+    font-size: 10px;
+    padding-left: 15px;
+    color: white;
+    
+}
+
+.name-img {
+
+    padding-left: 10px;
+    padding-right: 0;
+    display: flex;
+    border-left: white;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+
+.bell {
+    height: 20px;
+    width: 20px;
+    fill: white; 
+    padding-left: 25px;
+    padding-right: 5px;
+    padding-top: 10px;
+    
+}
+
+
+.alert-banner{
+ background-color:#7b68ee ;
+ color:white;
+ font-size: 10px;
+ display: flex;
+ justify-content: space-between;
+
+}
+
+
+.alert-banner-close {
+    padding-right: 10px;
+}
+
+
+/* NAV */
+.nav {
+    
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    background-color: #663399 ;
+    justify-content: space-evenly;
+    
+}
+
+
+.nav-img {
+   height: 20px;
+   width: 20px;
+}
+
+/* Dashboard and Alert */
+.dash {
+    grid-area: dash;
+}
+
+/* Line Graph Section */
+
+.traffic {
+    grid-area: traffic;
+        
+}
+
+.traffic-header {
+    display: inline-block;
+    font-size: 10px;
+    
+}
+
+.traffic-nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 0;
+}
+
+.traffic-nav-link {
+
+    padding-right: 10px;
+}
+
+
+
+/* Bar Chart Section */
+
+.daily-traffic-header{
+
+font-size: 10px;
+}
+
+.daily-traffic{
+    grid-area: daily-traffic;
+}
+
+/* Donut Chart Section */
+.mobile-users-header {
+
+    font-size: 10px;
+}
+
+.mobile-users {
+    grid-area: mobile-users;
+}
+
+/* Social Media Section */
+
+.social-stats {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.social-name {
+font-size: 10px;
+color: #7b68ee 
+}
+
+.social-text {
+    display:inline-block;
+}
+.social-number {
+    font-size: 20px;
+}
+
+.facebook-image, .instagram-image, .twitter-image {
+
+    fill: #7b68ee ;
+    width: 60px;
+    height: 60px;
+    padding-top: 20px;
+
+}
+
+.facebook-stats, .instagram-stats, .twitter-stats {
+    background-color: lightgray; 
+    border: darkgray solid 1px;
+    
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-bottom: 20px;
+} 
+
+.socials {
+    grid-area: socials;
+}
+
+.widget-container-full, .widget-container-half {
+    width: 95vw;
+    }
+
+/* New Members and Recent Activity Section */
+
+#new-members-header, #recent-activity-header {
+
+font-size: 10px;
+text-align: left;
+
+}
+
+.new-members, .recent-activity {
+   
+ display: inline;
+ margin: 0 auto;
+ text-align: center;
+ width: 100%;
+ 
+}
+
+.profile-image {
+
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.new-members {
+    grid-area: new-members;
+}
+
+
+.recent-activity {
+  grid-area: recent-activity;
+
+}
+
+/* Message Section */
+
+.message {
+
+    grid-area: message;
+}
+
+/* Settings Section */
+
+.settings {
+  
+    grid-area: settings;
+}
+
+.widget-container-full, .widget-container-half {
+    width: 95vw;
+   
+}
+
+
+/* Desktop Media Query */
+@media (min-width: 1024px) {
+
+    .grid-container {
+   
+            grid-template-columns: 55px 1fr;
+            grid-template-areas:
+            "header header"
+            "nav main";
+    }
+
+    .main {
+        grid-template-columns: 50%;
+        grid-template-areas:
+        "dash dash"
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "socials socials"
+        "new-members recent-activity"
+        "message settings"
+
+    }
+
+    .widget-container-full {
+        width: 90vw;
+        }
+        .widget-container-half {
+
+        width: 45vw;
+        }
+}
+
+
+
+
+
+/* Tablet Media Query */
+@media (min-width: 768px) {
+
+    .grid-container {
+   
+        grid-template-columns: 55px 1fr;
+        grid-template-areas:
+        "header header"
+        "nav main";
+}
+
+    .main {
+        grid-template-columns: 50%;
+        grid-template-areas:
+        "dash dash"
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "socials socials"
+        "new-members new-members"
+        "recent-activity recent-activity"
+        "message message"
+        "settings settings"
+
+    }
+
+
+    
+}
+
