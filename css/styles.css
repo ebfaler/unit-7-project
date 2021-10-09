@@ -1,10 +1,11 @@
 
+/* General Styling */
+
 * {
 
     font-family: 'Roboto', sans-serif;
 
 }
-
 
 .grid-container {
 
@@ -16,6 +17,11 @@ grid-template-areas:
 "header"
 "nav"
 "main";
+}
+
+.widget-container-full, .widget-container-half {
+    width: 95vw;
+   
 }
 
 .main {
@@ -39,7 +45,7 @@ grid-template-areas:
     grid-area: header;
     display: flex;
     flex-direction:row;
-    background-color: #9370DB;
+    background-color:rgb(144, 115, 180);
     height: auto;
     width: auto;
     padding: 10px;
@@ -50,7 +56,6 @@ grid-template-areas:
     /* padding-right: 50px; */
     display: flex;
     justify-content: space-between;
-
     
 }
 
@@ -99,19 +104,6 @@ grid-template-areas:
 }
 
 
-.alert-banner{
- background-color:#7b68ee ;
- color:white;
- font-size: 10px;
- display: flex;
- justify-content: space-between;
-
-}
-
-
-.alert-banner-close {
-    padding-right: 10px;
-}
 
 
 /* NAV */
@@ -120,7 +112,7 @@ grid-template-areas:
     grid-area: nav;
     display: flex;
     flex-direction: row;
-    background-color: #663399 ;
+    background-color:rgb(98, 56, 148);
     justify-content: space-evenly;
     
 }
@@ -134,7 +126,42 @@ grid-template-areas:
 /* Dashboard and Alert */
 .dash {
     grid-area: dash;
+
 }
+
+.dash-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#search {
+  width: 0.7fr;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.header-search {
+ 
+  border-left: 1px black solid;
+  border-bottom: 1px black solid;
+  
+}
+
+
+.alert-banner {
+    background-color:rgb(144, 115, 180);
+    color:white;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+   
+   }
+   
+   
+   .alert-banner-close {
+       padding-right: 10px;
+   }
+   
 
 /* Line Graph Section */
 
@@ -145,7 +172,7 @@ grid-template-areas:
 
 .traffic-header {
     display: inline-block;
-    font-size: 10px;
+    font-size: 0.8em;
     
 }
 
@@ -167,7 +194,7 @@ grid-template-areas:
 
 .daily-traffic-header{
 
-font-size: 10px;
+font-size: 0.8em;
 }
 
 .daily-traffic{
@@ -177,7 +204,7 @@ font-size: 10px;
 /* Donut Chart Section */
 .mobile-users-header {
 
-    font-size: 10px;
+    font-size: 0.8em;
 }
 
 .mobile-users {
@@ -187,13 +214,13 @@ font-size: 10px;
 /* Social Media Section */
 
 .social-stats {
-    font-size: 10px;
+    font-size: 0.8em;
     margin-bottom: 20px;
 }
 
 .social-name {
-font-size: 10px;
-color: #7b68ee 
+font-size: 0.8em;
+color: rgb(144, 115, 180);
 }
 
 .social-text {
@@ -205,7 +232,7 @@ color: #7b68ee
 
 .facebook-image, .instagram-image, .twitter-image {
 
-    fill: #7b68ee ;
+    fill:rgb(144, 115, 180) ;
     width: 60px;
     height: 60px;
     padding-top: 20px;
@@ -213,15 +240,16 @@ color: #7b68ee
 }
 
 .facebook-stats, .instagram-stats, .twitter-stats {
-    background-color: lightgray; 
+    background-color: rgb(241, 235, 235); 
     border: darkgray solid 1px;
     
-    width: 200px;
+    width: 85ev;
     height: 100px;
     display: flex;
     justify-content: space-evenly;
     margin: auto;
     margin-bottom: 20px;
+
 } 
 
 .socials {
@@ -236,7 +264,7 @@ color: #7b68ee
 
 #new-members-header, #recent-activity-header {
 
-font-size: 10px;
+font-size: 0.8em;
 text-align: left;
 
 }
@@ -247,7 +275,34 @@ text-align: left;
  margin: 0 auto;
  text-align: center;
  width: 100%;
- 
+ border-top:gray solid 1px;
+ border-bottom:gray solid 1px;
+ font-size: 15px;
+
+}
+
+.activity-container, .members-container {
+
+    border-bottom:gray solid 1px;
+    padding-top: 20px;
+    
+
+}
+
+a {
+
+text-decoration: none;
+
+}
+
+.email-link {
+
+}
+
+.activity-link {
+color: black;
+font-weight: bold;
+
 }
 
 .profile-image {
@@ -265,13 +320,47 @@ text-align: left;
 .recent-activity {
   grid-area: recent-activity;
 
-)
+}
+
 
 /* Message Section */
 
 .message {
+    grid-area: message;  
+}
 
-    grid-area: message;
+.message-user {
+    font-size: 0.8em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 95vw;
+    
+}
+
+input {
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+textarea {
+    height: 160px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+button {
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: rgb(144, 115, 180);
+    border: none;
+    border-radius: 10px;
+
 }
 
 /* Settings Section */
@@ -281,10 +370,16 @@ text-align: left;
     grid-area: settings;
 }
 
-.widget-container-full, .widget-container-half {
-    width: 95vw;
-   
+.settings-header {
+    font-size: 0.8em;
 }
+
+
+
+
+
+
+
 
 
 /* Desktop Media Query */
@@ -318,8 +413,6 @@ text-align: left;
         width: 45vw;
         }
 }
-
-
 
 
 
