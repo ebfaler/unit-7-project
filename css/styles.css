@@ -4,6 +4,7 @@
 * {
 
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 
 }
 
@@ -92,19 +93,56 @@ grid-template-areas:
     border-left-width: 1px;
 }
 
+.bell-icon {
+    
+    display: flex;
+
+}
 
 .bell {
-    height: 20px;
-    width: 20px;
+  
     fill: white; 
-    padding-left: 25px;
-    padding-right: 5px;
-    padding-top: 10px;
-    
+    height: 20px;
+    width: 20px; 
+    margin-left: 25px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+/* Bell animation */
+
+@keyframes rotate {
+0% {
+transform: rotate(0deg);
+}
+50% {
+transform: rotate(180deg) ;
+}
+80% {
+transform: rotate(150deg);
+}
+100% {
+    transform: rotate(0deg);
+    }
+
+} 
+
+.bell, .bell-path  {
+    transform-origin: 50% 50%;
+}
+
+.bell:hover, .bell-path:hover {
+    animation: rotate 1s .2s ease backwards;
+
 }
 
 
-
+#green-dot {
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #3bb35b;
+}
 
 /* NAV */
 .nav {
@@ -128,22 +166,30 @@ grid-template-areas:
     grid-area: dash;
 
 }
+.headline {
+font-size: 1.5em;
+}
 
 .dash-div {
     display: flex;
     flex-direction: row;
+    max-width: 95vw;
 }
 
 #search {
-  width: 0.7fr;
-  margin-left: 20px;
-  margin-top: 15px;
+  margin: 10px;
+  width: auto;
+  height: 30px;
 }
 
 .header-search {
  
   border-left: 1px black solid;
   border-bottom: 1px black solid;
+  margin-left: 15px;
+  margin-bottom:15px;
+  background-color: rgb(236, 230, 222);
+  max-width: auto;  
   
 }
 
@@ -243,7 +289,7 @@ color: rgb(144, 115, 180);
     background-color: rgb(241, 235, 235); 
     border: darkgray solid 1px;
     
-    width: 85ev;
+    width: 85vw;
     height: 100px;
     display: flex;
     justify-content: space-evenly;
@@ -368,13 +414,25 @@ button {
 .settings {
   
     grid-area: settings;
+   
 }
 
 .settings-header {
     font-size: 0.8em;
 }
 
+.toggle-div{
 
+display: flex;
+justify-content: space-between;
+
+}
+
+.switch-ios.switch-light input:checked ~ span {
+    border-color:rgb(144, 115, 180);
+    box-shadow: inset 0 0 0 30px rgb(144, 115, 180); 
+
+}
 
 
 
