@@ -67,8 +67,8 @@ const trafficCanvas = document.getElementById("traffic-chart");
 
 //configuring xy axis labels
 let trafficData1 = {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
-        "4-10", "11-17", "18-24", "25-31"],
+    labels: ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm",
+    "5pm", "6pm", "7pm", "8pm"],
     datasets: [{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
             2500],
@@ -78,8 +78,8 @@ let trafficData1 = {
 };
 
 let trafficData2 = {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
-        "4-10", "11-17", "18-24", "25-31"],
+    labels: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun",
+        "Mon", "Tues", "Weds", "Thurs"],
     datasets: [{
         data: [650, 1350, 1000, 2000, 2500, 1350, 1250, 1950, 1150, 1000,
             2500],
@@ -101,8 +101,8 @@ let trafficData3 = {
 
 
 let trafficData4 = {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
-        "4-10", "11-17", "18-24", "25-31"],
+    labels: ["Jan", "Feb", "March", "April", "May", "June", "July",
+        "Aug", "Sep", "Oct", "Nov"],
     datasets: [{
         data: [950, 1650, 1150, 3000, 2500, 1950, 1050, 1350, 2250, 2500,
             2500],
@@ -131,12 +131,16 @@ let trafficOptions = {
 };
 
 // displaying the line chart itself
-let trafficChart = new Chart(trafficCanvas, {
+const trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: trafficData1,
     options: trafficOptions
 });
 
+const updateChart = (chart, newData) => {
+    chart.data = newData;
+    chart.update();
+};
 
 // updating chart on click
 const toggleDiv = document.getElementsByClassName("switch-toggle switch-candy")[0];
@@ -146,39 +150,14 @@ for (var i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("click", (e) => {
         let timeChosen = e.target;
 
-        if (timeChosen.classList.contains('hourly')) {
-           
-            trafficChart.destroy();
-            let trafficChart = new Chart(trafficCanvas, {
-                type: 'line',
-                data: trafficData1,
-                options: trafficOptions
-            });
-
-
+        if (timeChosen.classList.contains('hourly')) {  
+            updateChart(trafficChart, trafficData1);     
         } else if (timeChosen.classList.contains('daily')) {
-
-            let trafficChart = new Chart(trafficCanvas, {
-                type: 'line',
-                data: trafficData2,
-                options: trafficOptions
-            });
-
+            updateChart(trafficChart, trafficData2);  
         } else if (timeChosen.classList.contains('weekly')) {
-
-            let trafficChart = new Chart(trafficCanvas, {
-                type: 'line',
-                data: trafficData3,
-                options: trafficOptions
-            });
-
+            updateChart(trafficChart, trafficData3);  
         } else if (timeChosen.classList.contains('monthly')) {
-            let trafficChart = new Chart(trafficCanvas, {
-                type: 'line',
-                data: trafficData4,
-                options: trafficOptions
-            });
-
+            updateChart(trafficChart, trafficData4);  
         };
 
     });
