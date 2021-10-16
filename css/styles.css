@@ -218,30 +218,6 @@ font-size: 1.5em;
     max-width: 95vw;
 }
 
-/* .search-container {
-
-display: flex;
-} */
-
-.search-div {
- 
-  /* border-left: 1px black solid;
-  border-bottom: 1px black solid; */
-  border: 1px black solid;
-  margin-left:15px;
-  margin-bottom:15px;
-  background-color: rgb(250, 248, 245);
-  width: 12.2em;
-  position: relative;
-  
-}
-
-#search {
-    margin: 10px;
-    width: auto;
-    height: auto;
-  }
-
 
 .alert-banner {
     background-color:rgb(144, 115, 180);
@@ -475,12 +451,10 @@ input {
 
 }
 
-/* rohalds to edit */
-.results div {
-    border-top: 1px solid #e5e9f8;
-    padding: 6px;
-    margin: 2px;
+.results {
+    border-top: 1px solid white;
     cursor: pointer;
+    padding: 3px;
   }
 
 textarea {
