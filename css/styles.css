@@ -326,11 +326,21 @@ color: rgb(144, 115, 180);
 
 .facebook-image, .instagram-image, .twitter-image {
 
-    fill:rgb(144, 115, 180) ;
+    border-radius: 50%;
+    background-color:rgb(144, 115, 180) ;
     width: 60px;
     height: 60px;
-    padding-top: 20px;
+    padding: .9em;
+    margin-top: 1em;
 
+}
+
+
+.facebook-image svg, .instagram-image svg, .twitter-image svg {
+
+width: 30px;
+height: 30px;
+fill: white;
 }
 
 .facebook-stats, .instagram-stats, .twitter-stats {
@@ -347,6 +357,12 @@ color: rgb(144, 115, 180);
 
 .socials {
     grid-area: socials;
+}
+
+.social-number {
+    font-size: 1.8em;
+    margin-top: 0;
+    font-weight: 5;
 }
 
 .widget-container-full, .widget-container-half {
@@ -477,17 +493,20 @@ button {
 .settings {
   
     grid-area: settings;
-   
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 .settings-header {
     font-size: 0.8em;
 }
 
+
 .toggle-div{
 
 display: flex;
-justify-content: space-between;
+
 
 }
 

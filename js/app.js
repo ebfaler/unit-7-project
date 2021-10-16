@@ -253,7 +253,7 @@ let mobileChart = new Chart(mobileCanvas, {
 // <-- Messaging Section -->
 
 
-const user = document.getElementById("userField");
+const user = document.getElementById("user-search");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 
@@ -297,7 +297,7 @@ userSearch.addEventListener("input", () => {
         const div = document.createElement("div");
         div.innerHTML = suggested.name;
         div.classList = "result";
-        resultsDiv.appendChild(div);
+        resultsDiv.append(div);
     });
     if (input === "") {
         resultsDiv.innerHTML = "";
@@ -312,53 +312,58 @@ userSearch.addEventListener("input", () => {
     }
 });
 
-// // <--Settings Local Storage-->
+// <--Settings Local Storage-->
 
-// const emailNotifications = document.getElementById("email-notifications");
-// const profilePublic = document.getElementById("profile-public");
-// const timezone = document.getElementById("timezone");
+const emailNotifications = document.getElementById("email-notifications");
+const profilePublic = document.getElementById("profile-public");
+const timezone = document.getElementById("timezone");
 
-// const settings = document.getElementById("settings-button");
+const settings = document.getElementById("settings-button");
 
-
-// //function to save choice in local storage
-// function saveChoice() {
-
-//     localStorage.setItem('emailNotif', emailNotifications.checked);
-//     localStorage.setItem('profileSettings', profilePublic.checked);
-//     localStorage.setItem('timezone', timezone.selectedIndex);
-
-// };
+let userPreferences = {};
 
 
-// // make save and cancel buttons functional
-
-// settings.addEventListener('click', e => {
-//     if (e.target.id === 'save') {
-//         saveChoice();
-//     } else if (e.target.id === 'cancel') {
-//         localStorage.clear();
-//         emailNotifications.checked = false;
-//         profilePublic.checked = false;
-//         timezone.selectedIndex = [0];
-//     }
-// });
+//function to save choice in local storage
 
 
-// //load selections
+function saveChoice() { // adding properties to the userPreferences
+    userPreferences.emailNotifications = emailNotifications.checked;
+    userPreferences.profilePublic = profilePublic.checked;
+    userPreferences.timezone = timezone.selectedIndex;
 
-// function loadChosen() {
-//     let choice1 = JSON.parse(localStorage.getItem('email-notifications'));
-//     let choice2 = JSON.parse(localStorage.getItem('profile-public'));
-//     let timeChosen = JSON.parse(localStorage.getItem('timezone'));
+    console.log(timezone);
+    //stringify the value
+    localStorage.setItem('user-preferences', JSON.stringify(userPreferences));
 
-//     if (choice1) {
-//         emailNotifications.checked = choice1;
-//     } if (choice2) {
-//         profilePublic.checked = choice2;
-//     } if (timeChosen) {
-//         timezone.selectedIndex = timeChosen;
-//     }
-// };
+};
 
-// loadChosen();
+
+// make save and cancel buttons functional
+
+settings.addEventListener('click', e => {
+    if (e.target.id === 'save') {
+        saveChoice();
+    } else if (e.target.id === 'cancel') {
+        localStorage.clear();
+        emailNotifications.checked = false;
+        profilePublic.checked = false;
+        timezone.selectedIndex = [0];
+    }
+});
+
+
+//load selections
+
+function loadChosen() {
+    userPreferences = JSON.parse(localStorage.getItem('user-preferences'));
+    if(userPreferences){
+        emailNotifications.checked = userPreferences.emailNotifications;
+        profilePublic.checked = userPreferences.profilePublic;
+        timezone.selectedIndex = userPreferences.timezone;
+    }else{
+        userPreferences = {};
+    }
+
+};
+
+loadChosen();
