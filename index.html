@@ -14,9 +14,11 @@
 <body class=“grid-container”>
 
     <!-- Header Section -->
-    <header class="header">
+    <header class="header" id="home">
         <div class="header-container">
-            <h1 class="web-app">WebApp &trade;</h1>
+           <div class="title-div">
+            <h1 class="web-app">Web<span style="font-weight: 300;">App&trade;</span> </h1>
+           </div>
             <!-- <div class="notifications"> -->
             <div id="bell-icon">
                 <svg class="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.033 122.88">
@@ -48,16 +50,16 @@
 
     <!-- Nav Section -->
     <nav class="nav">
-        <a href=" ">
+        <a href="#home">
             <img class="nav-img" src="web_app_dashboard_v3.2/svgs/home.svg" alt="house icon">
         </a>
-        <a href=" ">
+        <a href="#traffic">
             <img class="nav-img" src="web_app_dashboard_v3.2/svgs/bar-chart.svg" alt="chart icon">
         </a>
-        <a href=" ">
+        <a href="#new-members">
             <img class="nav-img" src="web_app_dashboard_v3.2/svgs/members.svg" alt="members icon">
         </a>
-        <a href=" ">
+        <a href="#settings">
             <img class="nav-img" src="web_app_dashboard_v3.2/svgs/settings.svg" alt="settings icon">
         </a>
     </nav>
@@ -69,13 +71,17 @@
 
         <section class="dash">
           <div class="dash-div">
+
             <div class="main-header">
                 <h2 class="headline">Dashboard</h2>
             </div>
 
-            <div class="header-search">
-                <input type="search" id="search" placeholder="search..." />
-            </div>
+            <form autocomplete="off" class="search-container">   
+               <div class="search-div">
+                 <input type="search" id="search" placeholder="search for user..." />
+               </div>
+            </form>
+
           </div> 
 
             <!-- alert banner -->
@@ -85,11 +91,10 @@
         </section>
 
         <!-- line graph charts -->
-        <section class="traffic">
+        <section class="traffic" id="traffic">
             <div class="traffic-header">
                 <h3>TRAFFIC</h3>
                   <fieldset>
-                    <legend>View</legend>
                     <div class="switch-toggle switch-candy">
                       <input id="hourly" class="hourly" name="view" type="radio" checked>
                       <label for="hourly" onclick="">Hourly</label>
@@ -105,15 +110,6 @@
                       <a></a>
                     </div>
                   </fieldset>
-               
-                <!-- <ul class="traffic-nav">
-                    <li class="traffic-nav-link">Hourly</li>
-                    <li class="traffic-nav-link">Daily</li>
-                    <li class="traffic-nav-link active">Weekly</li>
-                    <li class="traffic-nav-link">Monthly</li>
-                </ul> -->
-
-
             </div>
 
             <div class="widget-container-full">
@@ -149,7 +145,7 @@
         </section>
 
         <!-- Social Stats -->
-        <section class="socials">
+        <section class="socials" id="socials">
             <h3 class="social-stats">SOCIAL STATS</h3>
             <div class="facebook-stats">
                 <div class="facebook-image">
@@ -196,7 +192,7 @@
 
 
         <!-- New Members -->
-        <section class="new-members">
+        <section class="new-members" id="new-members">
 
             <div id="new-members-header">
                 <h3>NEW MEMBERS</h3>
@@ -322,7 +318,7 @@
         <!-- Settings Section -->
 
 
-        <section class="settings">
+        <section class="settings" id="settings">
             <h3 class="settings-header">SETTINGS</h3>
             <!-- custom CSS toggle code-->
 

@@ -38,7 +38,7 @@ grid-template-areas:
     "new-members" 
     "recent-activity"
     "message" 
-    "settings"
+    "settings";
 }
 /* HEADER */
 .header {
@@ -66,6 +66,7 @@ grid-template-areas:
     font-size: medium;
     color: white;
     padding-left: 10px;
+    font-weight: 500;
 }
 
 .member-img {
@@ -77,9 +78,12 @@ grid-template-areas:
 }
 
 .user-name {
-    font-size: 10px;
-    padding-left: 15px;
+    font-size: .65em;
+    padding-left: 1em;
+    padding-right: 0;
     color: white;
+    font-weight: 200;
+   
     
 }
 
@@ -197,7 +201,6 @@ transform: rotate(150deg);
 .nav-img {
    height: 20px;
    width: 20px;
-   fill: white;
 }
 
 /* Dashboard and Alert */
@@ -215,22 +218,29 @@ font-size: 1.5em;
     max-width: 95vw;
 }
 
-#search {
-  margin: 10px;
-  width: auto;
-  height: 30px;
+.search-container {
+
+display: flex;
 }
 
-.header-search {
+.search-div {
  
-  border-left: 1px black solid;
-  border-bottom: 1px black solid;
-  margin-left: 15px;
+  /* border-left: 1px black solid;
+  border-bottom: 1px black solid; */
+  border: 1px black solid;
+  margin-left:15px;
   margin-bottom:15px;
-  background-color: rgb(236, 230, 222);
-  max-width: auto;  
+  background-color: rgb(250, 248, 245);
+  width: 12.2em;
+  position: relative;
   
 }
+
+#search {
+    margin: 10px;
+    width: auto;
+    height: auto;
+  }
 
 
 .alert-banner {
@@ -261,18 +271,41 @@ font-size: 1.5em;
     
 }
 
-.traffic-nav {
+fieldset {
+    border: none;
+    width: auto;
+    background-color: white;
+}
+
+.switch-toggle.switch-candy {
+    width:85vw;
+    text-shadow: none;
+   
+ 
+}
+
+.switch-toggle.switch-candy label {
+    background-color: white; 
+    text-shadow: none;
+    color: black;
+    
+}
+
+
+.switch-candy input:checked + label {
+    color: white;
+    background-color: rgb(144, 115, 180);
+    
+
+}
+
+
+/* .traffic-nav {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     padding-left: 0;
-}
-
-.traffic-nav-link {
-
-    padding-right: 10px;
-}
-
+} */
 
 
 /* Bar Chart Section */
@@ -325,9 +358,8 @@ color: rgb(144, 115, 180);
 }
 
 .facebook-stats, .instagram-stats, .twitter-stats {
-    background-color: rgb(241, 235, 235); 
+    background-color:rgb(250, 248, 245); 
     border: darkgray solid 1px;
-    
     width: 85vw;
     height: 100px;
     display: flex;
@@ -474,8 +506,34 @@ justify-content: space-between;
 }
 
 
+/* Tablet Media Query */
+@media (min-width: 768px) {
+
+    .grid-container {
+   
+        grid-template-columns: 55px 1fr;
+        grid-template-areas:
+        "header header"
+        "nav main";
+}
+
+    .main {
+        grid-template-columns: 50%;
+        grid-template-areas:
+        "dash dash"
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "socials socials"
+        "new-members new-members"
+        "recent-activity recent-activity"
+        "message message"
+        "settings settings"
+
+    }
 
 
+    
+}
 
 
 
@@ -512,33 +570,4 @@ justify-content: space-between;
 }
 
 
-
-/* Tablet Media Query */
-@media (min-width: 768px) {
-
-    .grid-container {
-   
-        grid-template-columns: 55px 1fr;
-        grid-template-areas:
-        "header header"
-        "nav main";
-}
-
-    .main {
-        grid-template-columns: 50%;
-        grid-template-areas:
-        "dash dash"
-        "traffic traffic"
-        "daily-traffic mobile-users"
-        "socials socials"
-        "new-members new-members"
-        "recent-activity recent-activity"
-        "message message"
-        "settings settings"
-
-    }
-
-
-    
-}
 
