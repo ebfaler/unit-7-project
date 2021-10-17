@@ -495,27 +495,55 @@ button {
     grid-area: settings;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 }
 
 .settings-header {
     font-size: 0.8em;
 }
 
+#switch1, #switch2 {
 
-.toggle-div{
+    display: flex;
+    width: 95%;
+    
+    } 
+  
+.toggle-div {
+    margin: 5px;
+}
 
-display: flex;
+.toggle-text {
+font-size: 11px;
+width: 80%;
+padding-top: 8px;
+}
 
 
+.switch-ios.switch-light > span {
+    width: 40%;
 }
 
 .switch-ios.switch-light input:checked ~ span {
     border-color:rgb(144, 115, 180);
-    box-shadow: inset 0 0 0 30px rgb(144, 115, 180); 
+    box-shadow: inset 0 0 0 30px rgb(144, 115, 180);  
 
 }
 
+#timezone {
+    margin-top: 10px;
+}
+
+.settings-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 95%;
+}
+
+#save, #cancel { 
+   width: 50%;
+   margin:  20px;
+}
 
 /* Tablet Media Query */
 @media (min-width: 768px) {

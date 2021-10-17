@@ -74,6 +74,11 @@ let trafficData1 = {
             2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
+        fill: {
+            target: 'origin',
+            below: 'rgb(0, 0, 255)'    // And blue below the origin
+          }
+    
     }]
 };
 
@@ -85,6 +90,10 @@ let trafficData2 = {
             2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
+        fill: {
+            target: 'origin',
+            below: 'rgb(0, 0, 255)'    // And blue below the origin
+          }
     }]
 };
 
@@ -96,6 +105,10 @@ let trafficData3 = {
             2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
+        fill: {
+            target: 'origin',
+            below: 'rgb(0, 0, 255)'    // And blue below the origin
+          }
     }]
 };
 
@@ -108,6 +121,10 @@ let trafficData4 = {
             2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
+        fill: {
+            target: 'origin',
+            below: 'rgb(0, 0, 255)'    // And blue below the origin
+          }
     }]
 };
 
