@@ -23,7 +23,7 @@ grid-template-areas:
 }
 
 .widget-container-full, .widget-container-half {
-    width: 95vw;
+    width: 85vw;
    
 }
 
@@ -203,6 +203,7 @@ transform: rotate(150deg);
     flex-direction: row;
     background-color:rgb(98, 56, 148);
     justify-content: space-evenly;
+    height: 2em;
     
 }
 
@@ -210,6 +211,7 @@ transform: rotate(150deg);
 .nav-img {
    height: 20px;
    width: 20px;
+   margin-top: 20px;
 }
 
 /* Dashboard and Alert */
@@ -284,15 +286,6 @@ fieldset {
 
 }
 
-
-/* .traffic-nav {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding-left: 0;
-} */
-
-
 /* Bar Chart Section */
 
 .daily-traffic-header{
@@ -366,6 +359,7 @@ fill: white;
 
 .socials {
     grid-area: socials;
+    
 }
 
 .social-number {
@@ -404,7 +398,6 @@ text-align: left;
     border-bottom:gray solid 1px;
     padding-top: 20px;
     
-
 }
 
 a {
@@ -413,9 +406,6 @@ text-decoration: none;
 
 }
 
-.email-link {
-
-}
 
 .activity-link {
 color: black;
@@ -557,51 +547,112 @@ padding-top: 8px;
 /* Tablet Media Query */
 @media (min-width: 768px) {
 
-    .grid-container {
-   
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "header header"
-        "nav main";
-}
-
-    .main {
-        grid-template-columns: 50%;
-        grid-template-areas:
-        "dash dash"
-        "traffic traffic"
-        "daily-traffic mobile-users"
-        "socials socials"
-        "new-members new-members"
-        "recent-activity recent-activity"
-        "message message"
-        "settings settings"
-
+ .grid-container {
+    /* gives mav bar width of 40px  and header height of 80px */
+    grid-template-columns: 40px 1fr; 
+    grid-template-rows: 80px 1fr;
+    grid-template-areas:
+     "header header"
+     "nav main";
     }
 
 .header {
   margin: 0;
-  min-width: 100%;
-  /* grid-column: 1 / span 2; */
+  grid-area: header;
 }
 
 
 .nav {
     flex-direction: column;
     justify-content: flex-start;
-    height: 100vw;
-    width: 5vw;
-  
-  
+    height: 100%;
+    grid-area: nav;
  
+}
+
+.main {
+    grid-template-columns: 50%;
+    grid-area: main;
+    grid-template-areas:
+    "dash dash"
+    "traffic traffic"
+    "daily-traffic mobile-users"
+    "socials socials"
+    "new-members new-members"
+    "recent-activity recent-activity"
+    "message message"
+    "settings settings";
+    margin-left: 10px;
+    
+    
 }
     
-.switch-toggle.switch-candy {
-    width:100vw;
 
- 
+
+.alert-banner {
+    width: 95%;
+    margin-left: 10px;
 }
+
+
+.traffic{
+    width: 95%;
+    grid-area: traffic;
 }
+
+.widget-container-full, .widget-container-half   {
+    width: 90%;
+    padding-left: 10px;
+    margin:0 auto;
+    }
+
+#bar-chart {
+    padding-top: 80px;
+}
+
+.socials-div {
+    flex-direction: row;
+    display: flex;
+    max-width: 85%;
+    margin: 0 auto;
+
+
+}
+.facebook-stats, .instagram-stats, .twitter-stats {
+    margin: 20px;
+
+}
+
+  
+
+.activity-container, .members-container  {
+   display: flex;
+   padding-left: 30px;
+   justify-items: flex-end;
+}
+     
+.members-text, .activity-text {
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+   
+}
+
+.members-date {
+   
+    padding-left: 30em;
+    text-align: left;
+    position: absolute;
+    padding-left: 120em;
+
+}
+
+
+
+
+}
+
+
 /* Desktop Media Query */
 @media (min-width: 1024px) {
 
