@@ -570,6 +570,11 @@ padding-top: 8px;
  
 }
 
+/* .nav-img {
+    margin-left: auto;
+    margin-right: auto;
+} */
+
 .main {
     grid-template-columns: 50%;
     grid-area: main;
@@ -586,8 +591,6 @@ padding-top: 8px;
     
     
 }
-    
-
 
 .alert-banner {
     width: 95%;
@@ -647,7 +650,20 @@ padding-top: 8px;
 
 }
 
+#myDropdown {
+  
+    height: auto;
+    width: 40em;
+    position: absolute;
 
+}
+
+#myDropdown li {
+
+    font-size: 2em;
+    padding: .5em;
+
+}
 
 
 }
