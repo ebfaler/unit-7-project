@@ -46,15 +46,6 @@ notifs.forEach(notif => {
 });
 
 
-// const notif = document.querySelector(".notif");
-// const notifClose = document.querySelector(".notif-close");
-
-// notifClose.addEventListener('click', (e) =>{
-// notif.style.display = "none";
-// // console.log(element);
-// })
-
-
 // <--Autocomplete search input field that lets the user search for members.-->
 
 const search = document.querySelector(".header-search");
