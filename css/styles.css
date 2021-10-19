@@ -42,6 +42,11 @@ grid-template-areas:
     "message" 
     "settings";
 }
+
+h3 {
+    margin-left: 5px;
+}
+
 /* HEADER */
 .header {
     
@@ -52,6 +57,7 @@ grid-template-areas:
     height: 100%;
     width: 100%;
     padding: 10px;
+    justify-content: space-between;
 
 }
 
@@ -172,16 +178,17 @@ transform: rotate(150deg);
 
 #myDropdown li {
 
-    font-size: .5em;
-    padding: .5em;
+    font-size: .3em;
+    text-align: left;
 
 }
 
 .notif-close {
-    margin-left: 14em;
+    position: absolute;
+    margin-left: 5px;
+    right: 1em;
     
 }
-
 
 
 /* Modifying bullet color (From W3 School) */
@@ -211,7 +218,7 @@ transform: rotate(150deg);
 .nav-img {
    height: 20px;
    width: 20px;
-   margin-top: 20px;
+   margin-top: 5px;
 }
 
 /* Dashboard and Alert */
@@ -219,14 +226,18 @@ transform: rotate(150deg);
     grid-area: dash;
 
 }
+
 .headline {
 font-size: 1.5em;
+margin-top: 0;
+
 }
 
 .dash-div {
     display: flex;
     flex-direction: row;
-    max-width: 95vw;
+    max-width: 95vw;   
+
 }
 
 
@@ -547,10 +558,37 @@ padding-top: 8px;
 /* Tablet Media Query */
 @media (min-width: 768px) {
 
+.web-app {
+  font-size: 2em;
+    }
+
+.bell {
+        
+        height: 40px;
+        width: 40px; 
+        margin-left: 25px;
+        margin-right: 5px;
+        margin-top: 20px;
+    }
+
+.name-img {
+
+        padding-left: 10px;
+        margin-top: 20px;
+        display: flex;
+        
+}
+
+.bell-user {
+    display: flex;
+    justify-content: end;
+    padding-left: 100em;
+}
+
  .grid-container {
-    /* gives mav bar width of 40px  and header height of 80px */
-    grid-template-columns: 40px 1fr; 
-    grid-template-rows: 80px 1fr;
+    /* gives mav bar width of 60px  and header height of 100px */
+    grid-template-columns: 60px 1fr; 
+    grid-template-rows: 100px 1fr;
     grid-template-areas:
      "header header"
      "nav main";
@@ -567,14 +605,18 @@ padding-top: 8px;
     justify-content: flex-start;
     height: 100%;
     grid-area: nav;
+    
  
 }
 
-/* .nav-img {
-    margin-left: auto;
-    margin-right: auto;
-} */
+.nav a {
+    margin: 0 auto;
+}
 
+.nav-img {
+
+    margin: 15px;
+}
 .main {
     grid-template-columns: 50%;
     grid-area: main;
@@ -625,8 +667,7 @@ padding-top: 8px;
     margin: 20px;
 
 }
-
-  
+ 
 
 .activity-container, .members-container  {
    display: flex;
@@ -665,6 +706,13 @@ padding-top: 8px;
 
 }
 
+.switch-ios.switch-light > span {
+    width: 10%;
+}
+
+.toggle-text{
+   width: 10%;
+}
 
 }
 
