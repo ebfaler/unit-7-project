@@ -182,8 +182,10 @@ transform: rotate(150deg);
 
 #myDropdown li {
 
-    font-size: .3em;
+    font-size: .4em;
     text-align: left;
+    height: 5em;
+    padding-top: 2em;
 
 }
 
