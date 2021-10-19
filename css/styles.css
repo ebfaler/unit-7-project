@@ -105,6 +105,10 @@ h3 {
     border-left-width: 1px;
 }
 
+.bell-user {
+    display: flex;
+}
+
 .bell-icon {
     
     display: flex;
@@ -679,12 +683,13 @@ padding-top: 8px;
     text-align: left;
     margin-left: 30px;
     margin-bottom: 10px;
+
+
    
 }
 
 .members-date {
-   
-    padding-left: 30em;
+
     text-align: left;
     position: absolute;
     padding-left: 120em;
@@ -741,13 +746,62 @@ padding-top: 8px;
     }
 
     .widget-container-full {
-        width: 90vw;
+        width: 90%
         }
         .widget-container-half {
 
-        width: 45vw;
+        width: 50%;
         }
+
+        fieldset{
+          padding-left: 120em;
+        }
+        #bar-chart {
+
+         width: 80%;              
+        }
+
+    .bell-user {
+        padding-left: 130em;
+        
+    }
+
+    .switch-light.switch-ios:first-child {
+        margin-top: 1em;
+    }
+
+    #timezone {
+        margin: 1.5em;
+        height: 4em;
+        border: 1px solid gray;
+    }
+    
+    #send {
+        margin-top: .8em;
+    }
+
+    .members-date {
+
+        padding-left: 70em;
+    
+    }
+
+.members-text, .activity-text {
+        text-align: left;
+        margin-bottom: 10px;
+       
+    }
+
+  .activity-time {
+    margin: 0;
 }
 
+.members-container:nth-child(5), .activity-container:nth-child(5) {
+
+    border-bottom: 0;
+}
+
+
+}
 
 
