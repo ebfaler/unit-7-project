@@ -227,7 +227,7 @@ transform: rotate(150deg);
    margin-top: 5px;
 }
 
-/* Dashboard and Alert */
+/* Dashboard and Alert Section*/
 .dash {
     grid-area: dash;
 
