@@ -242,13 +242,14 @@ transform: rotate(150deg);
 .grey-box {
 
     width: 60%;
-    height: 6.5%;
+    height: 40px;
     border: 1px solid rgba(240, 255, 255, 0.212);
     position: absolute;
-    right: 1px;
+    right: 0px;
     background-color: #eef5f5dc;
 
 }
+
 
 .headline {
 font-size: 1.3em;
@@ -260,8 +261,7 @@ padding-top: .5em;
 .dash-div {
     display: flex;
     flex-direction: row;
-    max-width: 95%;  
-  
+    max-width: 95%; 
 
 }
 
